@@ -17,8 +17,7 @@ $(function(){
 		totalPrice: $('.total-price')
 	});
 	var cartJSON = localStorage.getItem('cart');
-	console.log(cartJSON);
-	if (cartJSON!='undefined' && cartJSON.length > 0) {
+	if (cartJSON && cartJSON.length > 0) {
     	cartModel.setItems(JSON.parse(cartJSON));
 	}
 
@@ -69,7 +68,6 @@ $(function(){
     });
 
     cartModel.on('change', function(){
-    	console.log(cartModel.toJSON());
     	localStorage.setItem('cart', cartModel.toJSON());
 	});
 
