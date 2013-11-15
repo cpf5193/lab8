@@ -14,6 +14,10 @@ function createMoviesView(config) {
     view.afterRender = function() {
         //add event handlers for add-to-cart buttons
         this.container.find('.add-to-cart').click(function(){
+            if($('.message').html()){
+                $('.message').html('');
+                $('.message').hide();
+            }
             var button = $(this);
             var eventData = {
                 movieID: button.attr('data-movie-id'),

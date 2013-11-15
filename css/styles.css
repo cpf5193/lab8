@@ -27,3 +27,10 @@ body {
     margin-top: 2em;
     text-align: right;
 }
+
+.message {
+	display: none;
+	font-size: 150%;
+	color: blue;
+	text-align: center;
+}
